@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".views.MainActivity">
+
+
+    <com.example.weatherclock.views.customViews.ClockView
+        android:id="@+id/clockView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.621" />
+
+    <com.github.pwittchen.weathericonview.WeatherIconView
+        android:id="@+id/my_weather_icon0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:weatherIconColor="@android:color/black"
+        app:weatherIconResource="@string/wi_day_fog"
+        app:weatherIconSize="40" />
+
+    <com.github.pwittchen.weathericonview.WeatherIconView
+        android:id="@+id/my_weather_icon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.21"
+        app:weatherIconColor="@android:color/black"
+        app:weatherIconResource="@string/wi_day_fog"
+        app:weatherIconSize="40" />
+
+    <com.github.pwittchen.weathericonview.WeatherIconView
+        android:id="@+id/my_weather_icon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.40"
+        app:weatherIconColor="@android:color/black"
+        app:weatherIconResource="@string/wi_day_fog"
+        app:weatherIconSize="40" />
+
+    <com.github.pwittchen.weathericonview.WeatherIconView
+        android:id="@+id/my_weather_icon3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.6"
+        app:weatherIconColor="@android:color/black"
+        app:weatherIconResource="@string/wi_day_fog"
+        app:weatherIconSize="40" />
+
+    <com.github.pwittchen.weathericonview.WeatherIconView
+        android:id="@+id/my_weather_icon4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.79"
+        app:weatherIconColor="@android:color/black"
+        app:weatherIconResource="@string/wi_day_fog"
+        app:weatherIconSize="40" />
+
+    <com.github.pwittchen.weathericonview.WeatherIconView
+        android:id="@+id/my_weather_icon5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.9"
+        app:weatherIconColor="@android:color/black"
+        app:weatherIconResource="@string/wi_day_fog"
+        app:weatherIconSize="40" />
+
+    <com.github.pwittchen.weathericonview.WeatherIconView
+        android:id="@+id/my_weather_icon6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.9"
+        app:weatherIconColor="@android:color/black"
+        app:weatherIconResource="@string/wi_day_fog"
+        app:weatherIconSize="40" />
+
+    <com.github.pwittchen.weathericonview.WeatherIconView
+        android:id="@+id/my_weather_icon7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.79"
+        app:weatherIconColor="@android:color/black"
+        app:weatherIconResource="@string/wi_day_fog"
+        app:weatherIconSize="40" />
+
+    <com.github.pwittchen.weathericonview.WeatherIconView
+        android:id="@+id/my_weather_icon8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.6"
+        app:weatherIconColor="@android:color/black"
+        app:weatherIconResource="@string/wi_day_fog"
+        app:weatherIconSize="40" />
+
+    <com.github.pwittchen.weathericonview.WeatherIconView
+        android:id="@+id/my_weather_icon9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.40"
+        app:weatherIconColor="@android:color/black"
+        app:weatherIconResource="@string/wi_day_fog"
+        app:weatherIconSize="40" />
+
+    <com.github.pwittchen.weathericonview.WeatherIconView
+        android:id="@+id/my_weather_icon10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.21"
+        app:weatherIconColor="@android:color/black"
+        app:weatherIconResource="@string/wi_day_fog"
+        app:weatherIconSize="40" />
+
+    <com.github.pwittchen.weathericonview.WeatherIconView
+        android:id="@+id/my_weather_icon11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.10"
+        app:weatherIconColor="@android:color/black"
+        app:weatherIconResource="@string/wi_day_fog"
+        app:weatherIconSize="40" />
+
+    <com.github.pwittchen.weathericonview.WeatherIconView
+        android:id="@+id/my_weather_icon12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@+id/clockView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:weatherIconColor="@android:color/black"
+        app:weatherIconResource="@string/wi_day_fog"
+        app:weatherIconSize="60" />
+
+    <TextView
+        android:id="@+id/textView0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000C"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="@+id/clockView"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.23000002" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000C"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintStart_toStartOf="@+id/clockView"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.33" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000C"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintStart_toStartOf="@+id/clockView"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000C"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintStart_toStartOf="@+id/clockView"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000C"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.70"
+        app:layout_constraintStart_toStartOf="@+id/clockView"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.67" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000C"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="@+id/clockView"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.77" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000C"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toStartOf="@+id/clockView"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.77" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000C"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.30"
+        app:layout_constraintStart_toStartOf="@+id/clockView"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.67" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000C"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintStart_toStartOf="@+id/clockView"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000C"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintStart_toStartOf="@+id/clockView"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000C"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toStartOf="@+id/clockView"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.33" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000C"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toStartOf="@+id/clockView"
+        app:layout_constraintTop_toTopOf="@+id/clockView"
+        app:layout_constraintVertical_bias="0.23" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000C"
+        android:textColor="@color/colorBlack"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.50" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/floatingActionMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gps"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu_backgroundColor="@android:color/transparent"
+        app:menu_colorNormal="@color/colorSmallCircle"
+        app:menu_colorPressed="@color/colorSmallCircle"
+        app:menu_fab_label=""
+        app:menu_icon="@drawable/menufab"
+
+        app:menu_openDirection="up"
+        app:menu_showShadow="true">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/gpsfab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gps"
+            app:fab_colorNormal="@color/colorSmallCircle"
+            app:fab_colorPressed="@color/colorSmallCircle"
+            app:fab_label="GPS" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/timefab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/time"
+            app:fab_colorNormal="@color/colorSmallCircle"
+            app:fab_colorPressed="@color/colorSmallCircle"
+            app:fab_label="Time Format" />
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_percent="50"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/center"
+        app:layout_constraintBottom_toBottomOf="@+id/clockView"
+        app:layout_constraintEnd_toEndOf="@+id/clockView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="205dp"
+        android:layout_marginEnd="205dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="205dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
