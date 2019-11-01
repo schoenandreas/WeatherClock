@@ -419,6 +419,15 @@
             app:fab_colorNormal="@color/colorSmallCircle"
             app:fab_colorPressed="@color/colorSmallCircle"
             app:fab_label="Time Format" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/degreeFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_thermometer"
+            app:fab_colorNormal="@color/colorSmallCircle"
+            app:fab_colorPressed="@color/colorSmallCircle"
+            app:fab_label="Toggle Temperature Unit" />
     </com.github.clans.fab.FloatingActionMenu>
 
 
@@ -429,7 +438,8 @@
         android:textColor="@color/colorBlack"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text=" " />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"

@@ -15,7 +15,8 @@ public interface WeatherApi {
             @Path("key") String key,
             @Path("latitude") float latitude,
             @Path("longitude") float longitude,
-            @Query("exclude") String excludeParams
+            @Query("exclude") String excludeParams,
+            @Query("units") String unitParam
     );
 
 }

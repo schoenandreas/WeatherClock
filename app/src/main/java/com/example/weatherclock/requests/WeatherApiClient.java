@@ -38,11 +38,11 @@ public class WeatherApiClient {
         return mWeather;
     }
 
-    public void getWeatherApi(float latitude, float longitude, String exclude){
+    public void getWeatherApi(float latitude, float longitude, String exclude, String unit) {
         if(mRetrieveWeatherRunnable != null){
             mRetrieveWeatherRunnable = null;
         }
-        mRetrieveWeatherRunnable = new RetrieveWeatherRunnable(latitude, longitude, exclude);
+        mRetrieveWeatherRunnable = new RetrieveWeatherRunnable(latitude, longitude, exclude, unit);
 
         final Future handler = AppExecutors.getInstance().networkIO().submit(mRetrieveWeatherRunnable);
 
@@ -61,19 +61,21 @@ public class WeatherApiClient {
         private float latitude;
         private float longitude;
         private String exclude;
+        private String unit;
         boolean cancelRequest;
 
-        public RetrieveWeatherRunnable(float latitude, float longitude, String exclude) {
+        public RetrieveWeatherRunnable(float latitude, float longitude, String exclude, String unit) {
             this.latitude = latitude;
             this.longitude = longitude;
             this.exclude = exclude;
+            this.unit = unit;
             cancelRequest = false;
         }
 
         @Override
         public void run() {
             try {
-                Response response = getWeather(latitude, longitude, exclude).execute();
+                Response response = getWeather(latitude, longitude, exclude, unit).execute();
                 if(cancelRequest){
                     return;
                 }
@@ -92,12 +94,13 @@ public class WeatherApiClient {
 
         }
 
-        private Call<WeatherResponse> getWeather(float latitude, float longitude, String exclude){
+        private Call<WeatherResponse> getWeather(float latitude, float longitude, String exclude, String unit) {
             return ServiceGenerator.getWeatherApi().getWeatherReport(
                     Constants.API_KEY,
                     latitude,
                     longitude,
-                    exclude
+                    exclude,
+                    unit
             );
         }
 

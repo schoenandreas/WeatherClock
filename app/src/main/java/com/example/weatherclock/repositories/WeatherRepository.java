@@ -27,7 +27,7 @@ public class WeatherRepository {
         return mWeatherApiClient.getWeather();
     }
 
-    public void getWeatherApi(float latitude, float longitude, String exclude){
-        mWeatherApiClient.getWeatherApi(latitude,longitude,exclude);
+    public void getWeatherApi(float latitude, float longitude, String exclude, String unit) {
+        mWeatherApiClient.getWeatherApi(latitude, longitude, exclude, unit);
     }
 }
