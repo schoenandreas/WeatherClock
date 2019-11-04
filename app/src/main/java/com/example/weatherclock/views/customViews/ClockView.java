@@ -23,7 +23,7 @@ import androidx.annotation.Nullable;
 public class ClockView extends View {
 
 
-
+    private static final String TAG = "ClockView";
 
     private Canvas canvas;
     private Paint paintBig;
@@ -120,15 +120,21 @@ public class ClockView extends View {
         drawLines();
     }
 
-    public void drawLines(){
+    private void drawLines() {
+        Log.d(TAG, "drawLines");
         Calendar calendar = Calendar.getInstance();
         int hour = calendar.get(Calendar.HOUR);
-        for (int i=0; i<12;i++) {
+        for (int i = 0; i<12; i++) {
             if (hour == i || hour+1 == i || (hour==11 && i ==0)) {
                 canvas.drawLine(lines[i*4],lines[i*4+1],lines[i*4+2],lines[i*4+3],paintLineHighlighted);
             }else{
                 canvas.drawLine(lines[i*4],lines[i*4+1],lines[i*4+2],lines[i*4+3],paintLine);
             }
         }
+
+    }
+
+    public void reDraw() {
+        this.invalidate();
     }
 }

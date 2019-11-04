@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.example.weatherclock.R;
 import com.example.weatherclock.models.WeatherData;
 import com.example.weatherclock.requests.responses.WeatherResponse;
+import com.example.weatherclock.util.UIUpdateNotifier;
 import com.example.weatherclock.viewmodels.WeatherClockViewModel;
 import com.example.weatherclock.views.customViews.ClockView;
 import com.github.pwittchen.weathericonview.WeatherIconView;
@@ -52,15 +53,27 @@ public class MainActivity extends AppCompatActivity {
 
         initOnClickListeners();
 
-        makeWeatherApiCall();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mWeatherClockViewModel.enableTimerTask();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mWeatherClockViewModel.disableTimerTask();
     }
 
     private void subscribeObservers() {
         mWeatherClockViewModel.getWeather().observe(this, new Observer<WeatherResponse>() {
             @Override
             public void onChanged(WeatherResponse weatherResponse) {
-                Log.d(TAG, "onChanged: " + weatherResponse.toString());
+
                 try {
+                    Log.d(TAG, "onChanged: " + weatherResponse.toString());
                     updateWeatherUI(weatherResponse);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -75,6 +88,14 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "onChanged: WeatherData Changed");
                 mWeatherClockViewModel.setLocation(locationArg);
                 // textView.setText("Latitude "+ (mWeatherClockViewModel.getLocation().getLatitude())+ " Longitude " + (mWeatherClockViewModel.getLocation().getLongitude()));
+            }
+        });
+
+        mWeatherClockViewModel.getUiUpdateNotifierMutableLiveData().observe(this, new Observer<UIUpdateNotifier>() {
+            @Override
+            public void onChanged(UIUpdateNotifier uiUpdateNotifier) {
+                Log.d(TAG, "onChanged: UIUpdatenotifier On Changed");
+                makeWeatherApiCall();
             }
         });
     }
@@ -109,6 +130,8 @@ public class MainActivity extends AppCompatActivity {
             degreeTextViews[j].setText(Math.round(hourData[i].getTemperature()) + tempSetting);
             weatherIconViews[j].setIconResource(mWeatherClockViewModel.translateWeatherIcon(hourData[i].getIcon()));
         }
+        mWeatherClockViewModel.setWeatherResponseTime(current.getTime());
+        clockView.reDraw();
     }
 
     private void initOnClickListeners() {
@@ -118,10 +141,10 @@ public class MainActivity extends AppCompatActivity {
                 checkPermission();
             }
         });
-        findViewById(R.id.timefab).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.refreshFab).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mWeatherClockViewModel.getLocationApi();
+                makeWeatherApiCall();
 
             }
         });
@@ -160,4 +183,5 @@ public class MainActivity extends AppCompatActivity {
                     123);
         }
     }
+
 }

@@ -390,14 +390,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/gps"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:menu_backgroundColor="@android:color/transparent"
         app:menu_colorNormal="@color/colorSmallCircle"
         app:menu_colorPressed="@color/colorSmallCircle"
         app:menu_fab_label=""
-        app:menu_icon="@drawable/menufab"
-
+        app:menu_icon="@drawable/ic_settings_black_24dp"
         app:menu_openDirection="up"
         app:menu_showShadow="true">
 
@@ -412,13 +412,13 @@
             app:fab_label="GPS" />
 
         <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/timefab"
+            android:id="@+id/refreshFab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/time"
+            android:src="@drawable/ic_refresh_black_24dp"
             app:fab_colorNormal="@color/colorSmallCircle"
             app:fab_colorPressed="@color/colorSmallCircle"
-            app:fab_label="Time Format" />
+            app:fab_label="Refresh" />
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/degreeFab"

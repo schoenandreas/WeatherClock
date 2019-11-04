@@ -16,7 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-public class LocationRepository extends Activity {
+public class LocationRepository {
 
 
     private static final String TAG = "LocationRepository";
